@@ -20,3 +20,23 @@ body {
 }
 
 a { text-decoration: none; color: inherit; }
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (max-width: 640px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+[data-theme="light"] {
+  --bg: #f5f4f0;
+  --surface: #eeede8;
+  --border: #dddbd4;
+  --accent: #9a7a3a;
+  --text: #1a1a18;
+  --muted: #6b6960;
+  --dim: #b0ae a6;
+}

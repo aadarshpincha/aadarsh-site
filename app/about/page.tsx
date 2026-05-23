@@ -1,69 +1,62 @@
 export default function About() {
     return (
-      <main>
-        <div style={{maxWidth:'900px',margin:'0 auto',padding:'72px 48px 56px',borderBottom:'1px solid var(--border)'}}>
-          <p style={{fontSize:'10px',letterSpacing:'0.16em',textTransform:'uppercase',color:'var(--accent)',marginBottom:'16px'}}>About</p>
-          <h1 style={{fontFamily:'Georgia,serif',fontSize:'clamp(36px,5vw,52px)',fontWeight:400,lineHeight:1.1}}>Finance professional.<br/>Indian equities analyst.</h1>
-        </div>
+      <main style={{maxWidth:'680px',margin:'0 auto',padding:'80px 48px'}}>
   
-        <div style={{maxWidth:'900px',margin:'0 auto',padding:'64px 48px'}}>
-          <div style={{display:'grid',gridTemplateColumns:'2fr 1fr',gap:'64px'}}>
-            <div>
-              {[
-                <>I'm Aadarsh — a finance professional based in <strong style={{color:'var(--text)',fontWeight:400}}>Bangalore</strong> with a focus on Indian listed equities. My work sits at the intersection of fundamental research, multi-asset analysis, and investment idea generation.</>,
-                <>My approach to investing is grounded in business fundamentals — I look for companies with <strong style={{color:'var(--text)',fontWeight:400}}>durable competitive advantages, high-quality earnings, and management teams</strong> that think like owners. Growth is a necessary condition, but I won't overpay for it.</>,
-                <>I passed CFA Level I in February 2025 with a score of <strong style={{color:'var(--text)',fontWeight:400}}>1770/1900</strong>, placing in the top 10% globally. I'm currently a <strong style={{color:'var(--text)',fontWeight:400}}>CFA Level II Candidate</strong>, deepening my understanding of equity valuation, fixed income, and derivatives.</>,
-                <>Before focusing on equity research, I completed a B.Sc. in Economics from <strong style={{color:'var(--text)',fontWeight:400}}>St. Joseph's College of Commerce, Bangalore</strong>, graduating with an 8.62 GPA. I was a rank holder in Mathematics at ISC Grade 12, scoring 97.4%.</>,
-              ].map((text, i) => (
-                <p key={i} style={{fontSize:'16px',color:'var(--muted)',lineHeight:1.85,marginBottom:'20px'}}>{text}</p>
-              ))}
-  
-              <div style={{background:'var(--surface)',border:'1px solid var(--border)',borderLeft:'3px solid var(--accent)',borderRadius:'0 6px 6px 0',padding:'24px 28px',margin:'40px 0'}}>
-                <div style={{fontSize:'10px',letterSpacing:'0.12em',textTransform:'uppercase',color:'var(--accent)',marginBottom:'8px'}}>CFA Program</div>
-                <div style={{fontSize:'15px',color:'var(--text)'}}>Level I — 1770 / 1900 · Top 10% globally</div>
-                <div style={{fontSize:'13px',color:'var(--muted)',marginTop:'4px'}}>Level II Candidate · May 2026</div>
-              </div>
-  
-              <p style={{fontSize:'16px',color:'var(--muted)',lineHeight:1.85}}>Outside of markets, I follow developments in Indian macroeconomics, monetary policy, and capital allocation trends across Indian corporates. I believe the best investment insights come from understanding businesses deeply — their unit economics, their reinvestment opportunities, and the quality of the people running them.</p>
-            </div>
-  
-            <div>
-              <div style={{marginBottom:'40px'}}>
-                <div style={{fontSize:'10px',letterSpacing:'0.14em',textTransform:'uppercase',color:'var(--accent)',marginBottom:'16px'}}>Education</div>
-                {[
-                  ['CFA Institute','CFA Level II Candidate','Level I: 1770/1900 · Top 10%'],
-                  ["St. Joseph's College of Commerce",'B.Sc. Economics · 2022–2025','8.62 / 10'],
-                  ['Bethany Junior College','ISC Grade 12 · 2020–2022','97.4% · Rank in Mathematics'],
-                ].map(([name,detail,grade])=>(
-                  <div key={name} style={{padding:'14px 0',borderBottom:'1px solid var(--border)'}}>
-                    <div style={{fontSize:'14px',color:'var(--text)',marginBottom:'2px'}}>{name}</div>
-                    <div style={{fontSize:'12px',color:'var(--muted)'}}>{detail}</div>
-                    <div style={{fontSize:'12px',color:'var(--accent)',marginTop:'2px'}}>{grade}</div>
-                  </div>
-                ))}
-              </div>
-  
-              <div style={{marginBottom:'40px'}}>
-                <div style={{fontSize:'10px',letterSpacing:'0.14em',textTransform:'uppercase',color:'var(--accent)',marginBottom:'16px'}}>Languages</div>
-                {[['English','Fluent'],['Hindi','Fluent'],['Kannada','Basic'],['French','Basic']].map(([lang,level])=>(
-                  <div key={lang} style={{fontSize:'13px',color:'var(--muted)',padding:'6px 0',borderBottom:'1px solid var(--border)',display:'flex',justifyContent:'space-between'}}>
-                    {lang}<span style={{fontSize:'11px',color:'var(--dim)'}}>{level}</span>
-                  </div>
-                ))}
-              </div>
-  
-              <div>
-                <div style={{fontSize:'10px',letterSpacing:'0.14em',textTransform:'uppercase',color:'var(--accent)',marginBottom:'16px'}}>Contact</div>
-                <div style={{padding:'14px 0',borderBottom:'1px solid var(--border)'}}>
-                  <a href="mailto:aadarsh.pincha@gmail.com" style={{fontSize:'14px',color:'var(--accent)'}}>aadarsh.pincha@gmail.com</a>
-                </div>
-                <div style={{padding:'14px 0'}}>
-                  <a href="https://www.linkedin.com/in/aadarsh-pincha/" target="_blank" style={{fontSize:'14px',color:'var(--accent)'}}>LinkedIn</a>
-                </div>
-              </div>
-            </div>
+        {/* Hero with photo */}
+        <div style={{display:'grid',gridTemplateColumns:'1fr 160px',gap:'40px',alignItems:'start',paddingBottom:'48px',borderBottom:'1px solid var(--border)'}}>
+          <div>
+            <p style={{fontSize:'10px',letterSpacing:'0.15em',textTransform:'uppercase',color:'var(--accent)',marginBottom:'14px'}}>Bangalore</p>
+            <h1 style={{fontSize:'36px',fontWeight:300,lineHeight:1.1,marginBottom:'18px',color:'var(--text)'}}>Aadarsh Pincha</h1>
+            <p style={{fontSize:'14px',color:'var(--muted)',lineHeight:1.9}}>
+              Finance professional with experience in equity research and portfolio management. Passed CFA Level I with 1770/1900 — top 10% globally. Currently a CFA Level II Candidate. I'm drawn to businesses where growth is structural, management allocates capital well, and valuation leaves room for a margin of safety.
+            </p>
+          </div>
+          <div style={{width:'160px',height:'210px',borderRadius:'6px',overflow:'hidden',border:'1px solid var(--border)',flexShrink:0}}>
+            <img src="/photo.jpg" alt="Aadarsh Pincha" style={{width:'100%',height:'100%',objectFit:'cover',objectPosition:'center top'}}/>
           </div>
         </div>
+  
+        {/* Work */}
+        <div style={{padding:'40px 0',borderBottom:'1px solid var(--border)'}}>
+          <p style={{fontSize:'10px',letterSpacing:'0.16em',textTransform:'uppercase',color:'var(--accent)',marginBottom:'24px'}}>Work</p>
+          <div style={{display:'flex',justifyContent:'space-between',alignItems:'baseline'}}>
+            <div>
+              <div style={{fontSize:'14px',color:'var(--text)',marginBottom:'4px'}}>Equity Research Analyst</div>
+              <a href="https://negencapital.com" target="_blank" style={{fontSize:'12px',color:'var(--accent)'}}>Negen Capital →</a>
+            </div>
+            <div style={{fontSize:'11px',color:'var(--dim)'}}>Sep 2025 – Feb 2026</div>
+          </div>
+        </div>
+  
+        {/* Education */}
+        <div style={{padding:'40px 0',borderBottom:'1px solid var(--border)'}}>
+          <p style={{fontSize:'10px',letterSpacing:'0.16em',textTransform:'uppercase',color:'var(--accent)',marginBottom:'24px'}}>Education</p>
+          {[
+            ['CFA Institute','Level II Candidate · Level I: 1770/1900 (Top 10%)','2025 –'],
+            ["St. Joseph's College of Commerce",'B.Sc. Economics · 8.62 / 10','2022 – 2025'],
+            ['Bethany Junior College','ISC Grade 12 · 97.4% · Rank in Mathematics','2020 – 2022'],
+          ].map(([name,detail,year])=>(
+            <div key={name} style={{display:'flex',justifyContent:'space-between',alignItems:'start',padding:'14px 0',borderBottom:'1px solid var(--border)'}}>
+              <div>
+                <div style={{fontSize:'13px',color:'var(--text)',marginBottom:'2px'}}>{name}</div>
+                <div style={{fontSize:'11px',color:'var(--muted)'}}>{detail}</div>
+              </div>
+              <div style={{fontSize:'11px',color:'var(--dim)',flexShrink:0,marginLeft:'24px'}}>{year}</div>
+            </div>
+          ))}
+        </div>
+  
+        {/* Contact */}
+        <div style={{paddingTop:'40px'}}>
+          <p style={{fontSize:'10px',letterSpacing:'0.16em',textTransform:'uppercase',color:'var(--accent)',marginBottom:'16px'}}>Contact</p>
+          <p style={{fontSize:'14px',color:'var(--muted)',lineHeight:1.8}}>
+            Reach me at{' '}
+            <a href="mailto:aadarsh.pincha@gmail.com" style={{color:'var(--accent)'}}>aadarsh.pincha@gmail.com</a>
+            {' '}or on{' '}
+            <a href="https://www.linkedin.com/in/aadarsh-pincha/" target="_blank" style={{color:'var(--accent)'}}>LinkedIn</a>.
+          </p>
+        </div>
+  
       </main>
     )
   }

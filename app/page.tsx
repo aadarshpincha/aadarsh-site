@@ -1,39 +1,52 @@
 export default function Home() {
   return (
-    <main>
-      <div style={{maxWidth:'900px',margin:'0 auto',padding:'110px 48px 90px'}}>
-        <p style={{fontSize:'11px',letterSpacing:'0.15em',textTransform:'uppercase',color:'var(--accent)',marginBottom:'24px'}}>Indian Equities · Fundamental Research · Long-term</p>
-        <h1 style={{fontFamily:'Georgia,serif',fontSize:'clamp(44px,6vw,72px)',fontWeight:400,lineHeight:1.08,marginBottom:'28px',color:'var(--text)'}}>Aadarsh Pincha</h1>
-        <p style={{fontSize:'18px',color:'var(--muted)',maxWidth:'560px',lineHeight:1.8,marginBottom:'44px'}}>I look for high-growth Indian businesses with durable fundamentals — bought at prices that make sense.</p>
-        <div style={{display:'flex',gap:'14px',flexWrap:'wrap'}}>
-          <a href="/research" style={{padding:'11px 26px',fontSize:'12px',letterSpacing:'0.05em',borderRadius:'3px',background:'var(--accent)',color:'#0d0f12',fontWeight:500}}>View research</a>
-          <a href="/about" style={{padding:'11px 26px',fontSize:'12px',letterSpacing:'0.05em',borderRadius:'3px',background:'transparent',color:'var(--muted)',border:'1px solid var(--border)'}}>About me</a>
+    <main style={{maxWidth:'680px',margin:'0 auto',padding:'160px 48px 80px'}}>
+      
+      {/* Hero */}
+      <div style={{paddingBottom:'80px',borderBottom:'1px solid var(--border)'}}>
+        <p style={{fontSize:'10px',letterSpacing:'0.15em',textTransform:'uppercase',color:'var(--accent)',marginBottom:'20px',fontFamily:'Bahnschrift, sans-serif'}}>Bangalore</p>
+        <h1 style={{fontFamily:'Bahnschrift, sans-serif',fontSize:'clamp(32px,4vw,48px)',fontWeight:300,lineHeight:1.1,marginBottom:'28px',color:'var(--text)'}}>Aadarsh Pincha</h1>
+        <p style={{fontSize:'15px',color:'var(--muted)',lineHeight:1.85,maxWidth:'480px',marginBottom:'8px',fontFamily:'Bahnschrift, sans-serif'}}>
+          Curious about finding businesses that are still under the radar and diving deep into their business model.
+        </p>
+        <p style={{fontSize:'15px',color:'var(--muted)',lineHeight:1.85,maxWidth:'480px',marginBottom:'44px',fontFamily:'Bahnschrift, sans-serif'}}>
+          Interested in the growing businesses of tomorrow.
+        </p>
+        <div style={{display:'flex',gap:'20px',alignItems:'center'}}>
+          <a href="https://www.linkedin.com/in/aadarsh-pincha/" target="_blank" title="LinkedIn" style={{color:'var(--muted)'}}>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+              <rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/>
+            </svg>
+          </a>
+          <a href="mailto:aadarsh.pincha@gmail.com" title="Email" style={{color:'var(--muted)'}}>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+              <polyline points="22,6 12,13 2,6"/>
+            </svg>
+          </a>
         </div>
       </div>
 
-      <div style={{width:'100%',height:'1px',background:'var(--border)',maxWidth:'900px',margin:'0 auto'}}/>
-
-      <div style={{maxWidth:'900px',margin:'0 auto',padding:'80px 48px'}}>
-        <p style={{fontSize:'10px',letterSpacing:'0.16em',textTransform:'uppercase',color:'var(--accent)',marginBottom:'40px'}}>Investment philosophy</p>
-        <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:'48px'}}>
-          <div style={{fontFamily:'Georgia,serif',fontSize:'26px',fontWeight:400,lineHeight:1.4,color:'var(--text)'}}>
-            Growth means nothing without <em style={{color:'var(--accent)'}}>discipline</em> on price.
+      {/* Research */}
+      <div style={{paddingTop:'64px'}}>
+        <p style={{fontSize:'10px',letterSpacing:'0.16em',textTransform:'uppercase',color:'var(--accent)',marginBottom:'28px',fontFamily:'Bahnschrift, sans-serif'}}>Research & Ideas</p>
+        <div style={{background:'var(--surface)',border:'1px solid var(--border)',borderRadius:'8px',padding:'44px',textAlign:'center'}}>
+          <div style={{width:'40px',height:'40px',borderRadius:'50%',background:'var(--dim)',margin:'0 auto 18px',display:'flex',alignItems:'center',justifyContent:'center'}}>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--muted)" strokeWidth="1.5">
+              <rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+            </svg>
           </div>
-          <div>
-            <p style={{fontSize:'15px',color:'var(--muted)',lineHeight:1.85,marginBottom:'16px'}}>My focus is on Indian listed equities — businesses where growth is structural, not cyclical. I look for companies with strong operating metrics, clean balance sheets, and management teams that allocate capital well.</p>
-            <p style={{fontSize:'15px',color:'var(--muted)',lineHeight:1.85}}>Valuation is the final filter, not an afterthought. I prefer to wait for the right entry than overpay for quality.</p>
-          </div>
-        </div>
-
-        <div style={{display:'grid',gridTemplateColumns:'repeat(4,1fr)',gap:'1px',background:'var(--border)',border:'1px solid var(--border)',borderRadius:'6px',overflow:'hidden',marginTop:'64px'}}>
-          {[['20+','Companies researched'],['1770','CFA Level I / 1900'],['5+','Investment ideas'],['50+','Companies screened']].map(([num,label])=>(
-            <div key={label} style={{background:'var(--surface)',padding:'28px 24px'}}>
-              <div style={{fontFamily:'Georgia,serif',fontSize:'34px',color:'var(--text)',lineHeight:1,marginBottom:'6px'}}>{num}</div>
-              <div style={{fontSize:'11px',color:'var(--muted)',letterSpacing:'0.03em'}}>{label}</div>
-            </div>
-          ))}
+          <h2 style={{fontFamily:'Bahnschrift, sans-serif',fontSize:'20px',fontWeight:300,marginBottom:'10px',color:'var(--text)'}}>Coming soon</h2>
+          <p style={{fontSize:'13px',color:'var(--muted)',maxWidth:'360px',margin:'0 auto 24px',lineHeight:1.8,fontFamily:'Bahnschrift, sans-serif'}}>
+            Research notes and investment ideas on Indian equities are in progress. Drop me a note to be notified.
+          </p>
+          <a href="mailto:aadarsh.pincha@gmail.com?subject=Research — notify me" style={{padding:'9px 22px',fontSize:'11px',letterSpacing:'0.05em',borderRadius:'3px',background:'var(--accent)',color:'#0d0f12',fontWeight:500,display:'inline-block',fontFamily:'Bahnschrift, sans-serif'}}>
+            Get notified →
+          </a>
         </div>
       </div>
+
     </main>
   )
 }

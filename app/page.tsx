@@ -7,7 +7,7 @@ export default function Home() {
         <p style={{fontSize:'10px',letterSpacing:'0.15em',textTransform:'uppercase',color:'var(--accent)',marginBottom:'20px',fontFamily:'Bahnschrift, sans-serif'}}>Bangalore</p>
         <h1 style={{fontFamily:'Bahnschrift, sans-serif',fontSize:'clamp(32px,4vw,48px)',fontWeight:300,lineHeight:1.1,marginBottom:'28px',color:'var(--text)'}}>Aadarsh Pincha</h1>
         <p style={{fontSize:'15px',color:'var(--muted)',lineHeight:1.85,maxWidth:'480px',marginBottom:'8px',fontFamily:'Bahnschrift, sans-serif'}}>
-          Curious about finding businesses that are still under the radar and diving deep into their business model.
+          I am curious about finding businesses that are still under the radar and diving deep into their business model.
         </p>
         <p style={{fontSize:'15px',color:'var(--muted)',lineHeight:1.85,maxWidth:'480px',marginBottom:'44px',fontFamily:'Bahnschrift, sans-serif'}}>
           Interested in the growing businesses of tomorrow.

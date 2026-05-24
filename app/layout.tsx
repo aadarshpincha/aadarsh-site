@@ -1,80 +1,86 @@
 import './globals.css'
-import ThemeToggle from './components/ThemeToggle'
+import type { ReactNode } from 'react'
+import ScrollReveal from './components/ScrollReveal'
+
 export const metadata = {
   title: 'Aadarsh Pincha — Equity Research Analyst, Bangalore',
   description: 'Aadarsh Pincha is a finance professional and equity research analyst based in Bangalore, focused on Indian equities. CFA Level II Candidate.',
   keywords: 'Aadarsh Pincha, equity research analyst, Bangalore, Indian equities, CFA, Negen Capital',
+  verification: { google: '5sJtUurIc7M74bYp0FEVYTdQxjeXHOIsJvwUm0wp_SE' },
   openGraph: {
     title: 'Aadarsh Pincha',
     description: 'Equity research analyst focused on Indian equities.',
     url: 'https://aadarsh-site.vercel.app',
     type: 'website',
   },
-  verification: {
-    google: '5sJtUurIc7M74bYp0FEVYTdQxjeXHOIsJvwUm0wp_SE',
-  },
 }
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <body>
-        <canvas id="dots" style={{position:'fixed',top:0,left:0,width:'100%',height:'100%',zIndex:0,pointerEvents:'none'}}/>
-        <script dangerouslySetInnerHTML={{__html:`
-          (function(){
-            const canvas = document.getElementById('dots');
-            if(!canvas) return;
-            const ctx = canvas.getContext('2d');
-            let W = canvas.width = window.innerWidth;
-            let H = canvas.height = window.innerHeight;
-            const dots = Array.from({length:140},()=>({
-              x: Math.random()*W,
-              y: Math.random()*H,
-              r: Math.random()*1.5+0.3,
-              dx: (Math.random()-0.5)*0.3,
-              dy: (Math.random()-0.5)*0.3,
-              o: Math.random()*0.25+0.05
-            }));
-            function draw(){
-              ctx.clearRect(0,0,W,H);
-              dots.forEach(d=>{
-                ctx.beginPath();
-                ctx.arc(d.x,d.y,d.r,0,Math.PI*2);
-                ctx.fillStyle='rgba(200,169,110,'+d.o+')';
-                ctx.fill();
-                d.x+=d.dx; d.y+=d.dy;
-                if(d.x<0||d.x>W) d.dx*=-1;
-                if(d.y<0||d.y>H) d.dy*=-1;
-              });
-              requestAnimationFrame(draw);
-            }
-            draw();
-            window.addEventListener('resize',()=>{
-              W=canvas.width=window.innerWidth;
-              H=canvas.height=window.innerHeight;
-            });
-          })();
-        `}}/>
+        <ScrollReveal />
+        <nav style={{
+          position: 'fixed', top: 0, left: 0, right: 0, zIndex: 100,
+          display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+          padding: '28px 48px',
+          backdropFilter: 'blur(12px)',
+          background: 'rgba(17,17,17,0.7)',
+        }}>
+          <a href="/" style={{
+            fontFamily: 'Cormorant Garamond, serif',
+            fontSize: '17px',
+            fontWeight: 300,
+            letterSpacing: '0.08em',
+            color: 'var(--text)',
+          }}>
+            Aadarsh Pincha
+          </a>
+          <ul style={{listStyle:'none', display:'flex', gap:'36px'}}>
+            {[['About','/about'],['Research','/research'],['Contact','/contact']].map(([label,href])=>(
+              <li key={href}>
+                <a href={href} style={{
+                  fontFamily: 'Inter, sans-serif',
+                  fontSize: '11px',
+                  fontWeight: 300,
+                  letterSpacing: '0.12em',
+                  textTransform: 'uppercase',
+                  color: 'var(--muted)',
+                }}>
+                  {label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </nav>
 
-        <div style={{position:'relative',zIndex:1}}>
-          <nav style={{position:'sticky',top:0,zIndex:100,background:'rgba(13,15,18,0.9)',backdropFilter:'blur(10px)',borderBottom:'1px solid var(--border)',padding:'0 24px',display:'flex',alignItems:'center',justifyContent:'space-between',height:'52px'}}>
-            <a href="/" style={{fontSize:'16px',color:'var(--text)',fontFamily:'Bahnschrift,sans-serif'}}>AP</a>
-            <ul style={{listStyle:'none',display:'flex',gap:'24px'}}>
-              {[['Home','/'],['About','/about'],['Research','/research']].map(([label,href])=>(
-                <li key={href}><a href={href} style={{color:'var(--muted)',fontSize:'11px',letterSpacing:'0.07em',textTransform:'uppercase',fontFamily:'Bahnschrift,sans-serif'}}>{label}</a></li>
-              ))}
-            </ul>
-            <ThemeToggle />
-          </nav>
-          {children}
-          <footer style={{borderTop:'1px solid var(--border)',padding:'28px 24px',maxWidth:'680px',margin:'0 auto',display:'flex',justifyContent:'space-between',alignItems:'center',flexWrap:'wrap',gap:'12px'}}>
-            <p style={{fontSize:'11px',color:'var(--dim)',fontFamily:'Bahnschrift,sans-serif'}}>© 2026 Aadarsh Pincha · Bangalore</p>
-            <div style={{display:'flex',gap:'20px'}}>
-              <a href="mailto:aadarsh.pincha@gmail.com" style={{fontSize:'11px',color:'var(--muted)',fontFamily:'Bahnschrift,sans-serif'}}>Email</a>
-              <a href="https://www.linkedin.com/in/aadarsh-pincha/" target="_blank" style={{fontSize:'11px',color:'var(--muted)',fontFamily:'Bahnschrift,sans-serif'}}>LinkedIn</a>
-            </div>
-          </footer>
-        </div>
+        {children}
+
+        <footer style={{
+          padding: '32px 48px',
+          borderTop: '1px solid var(--border)',
+          display: 'flex',
+          justifyContent: 'space-between',
+          alignItems: 'center',
+        }}>
+          <span style={{fontFamily:'Inter,sans-serif', fontSize:'11px', letterSpacing:'0.08em', color:'var(--dim)'}}>
+            © 2026 Aadarsh Pincha
+          </span>
+          <div style={{display:'flex', gap:'20px', alignItems:'center'}}>
+            <a href="https://www.linkedin.com/in/aadarsh-pincha/" target="_blank" style={{color:'var(--muted)'}}>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                <rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/>
+              </svg>
+            </a>
+            <a href="mailto:aadarsh.pincha@gmail.com" style={{color:'var(--muted)'}}>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                <polyline points="22,6 12,13 2,6"/>
+              </svg>
+            </a>
+          </div>
+        </footer>
       </body>
     </html>
   )

@@ -22,7 +22,6 @@ body {
   font-size: 15px;
 }
 
-/* Film grain */
 body::after {
   content: '';
   position: fixed;
@@ -36,7 +35,6 @@ body::after {
 
 a { text-decoration: none; color: inherit; }
 
-/* Scroll reveal */
 .reveal {
   opacity: 0;
   transform: translateY(24px);
@@ -47,6 +45,34 @@ a { text-decoration: none; color: inherit; }
   transform: translateY(0);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 640px) {
   body { font-size: 14px; }
+
+  nav {
+    padding: 18px 20px !important;
+    flex-wrap: nowrap !important;
+  }
+
+  nav > a {
+    font-size: 13px !important;
+    white-space: nowrap;
+  }
+
+  nav ul {
+    gap: 16px !important;
+  }
+
+  nav ul a {
+    font-size: 9px !important;
+    letter-spacing: 0.08em !important;
+  }
+
+  main section {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+
+  footer {
+    padding: 24px 20px !important;
+  }
 }

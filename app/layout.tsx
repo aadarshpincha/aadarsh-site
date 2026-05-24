@@ -10,6 +10,9 @@ export const metadata = {
     url: 'https://aadarsh-site.vercel.app',
     type: 'website',
   },
+  verification: {
+    google: '5sJtUurIc7M74bYp0FEVYTdQxjeXHOIsJvwUm0wp_SE',
+  },
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

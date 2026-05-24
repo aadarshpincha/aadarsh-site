@@ -1,6 +1,7 @@
 import './globals.css'
 import type { ReactNode } from 'react'
 import ScrollReveal from './components/ScrollReveal'
+import { Analytics } from '@vercel/analytics/next'
 
 export const metadata = {
   title: 'Aadarsh Pincha — Equity Research Analyst, Bangalore',
@@ -81,6 +82,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
             </a>
           </div>
         </footer>
+        <Analytics />
       </body>
     </html>
   )

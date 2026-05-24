@@ -1,8 +1,15 @@
 import './globals.css'
 import ThemeToggle from './components/ThemeToggle'
 export const metadata = {
-  title: 'Aadarsh Pincha',
-  description: 'Analyst focused on Indian equities.',
+  title: 'Aadarsh Pincha — Equity Research Analyst, Bangalore',
+  description: 'Aadarsh Pincha is a finance professional and equity research analyst based in Bangalore, focused on Indian equities. CFA Level II Candidate.',
+  keywords: 'Aadarsh Pincha, equity research analyst, Bangalore, Indian equities, CFA, Negen Capital',
+  openGraph: {
+    title: 'Aadarsh Pincha',
+    description: 'Equity research analyst focused on Indian equities.',
+    url: 'https://aadarsh-site.vercel.app',
+    type: 'website',
+  },
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

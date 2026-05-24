@@ -13,6 +13,11 @@ export const metadata = {
     url: 'https://aadarsh-site.vercel.app',
     type: 'website',
   },
+  icons: {
+    icon: '/favicon.ico',
+    shortcut: '/favicon-16x16.png',
+    apple: '/apple-touch-icon.png',
+  },
 }
 
 export default function RootLayout({ children }: { children: ReactNode }) {

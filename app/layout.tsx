@@ -6,6 +6,7 @@ export const metadata = {
   title: 'Aadarsh Pincha — Equity Research Analyst, Bangalore',
   description: 'Aadarsh Pincha is a finance professional and equity research analyst based in Bangalore, focused on Indian equities. CFA Level II Candidate.',
   keywords: 'Aadarsh Pincha, equity research analyst, Bangalore, Indian equities, CFA, Negen Capital',
+  robots: { index: false, follow: false },
   verification: { google: '5sJtUurIc7M74bYp0FEVYTdQxjeXHOIsJvwUm0wp_SE' },
   openGraph: {
     title: 'Aadarsh Pincha',
@@ -89,4 +90,4 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       </body>
     </html>
   )
-}
+}F
